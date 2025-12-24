@@ -90,32 +90,32 @@
   // You can change captions freely
   const galleries = {
     product: [
-      { src: "assets/product-1.jpg", title: "Product Photo 1", cap: "Isi caption product kamu" },
-      { src: "assets/product-2.jpg", title: "Product Photo 2", cap: "Isi caption product kamu" },
-      { src: "assets/product-3.jpg", title: "Product Photo 3", cap: "Isi caption product kamu" },
-      { src: "assets/product-4.jpg", title: "Product Photo 4", cap: "Isi caption product kamu" },
-      { src: "assets/product-5.jpg", title: "Product Photo 5", cap: "Isi caption product kamu" }
+      { src: "p1.jpeg", title: "Product", cap: "Photo 1" },
+      { src: "p2.jpeg", title: "Product", cap: "Photo 2" },
+      { src: "p3.jpeg", title: "Product", cap: "Photo 3" },
+      { src: "p4.jpeg", title: "Product", cap: "Photo 4" },
+      { src: "p5.jpeg", title: "Product", cap: "Photo 5" }
     ],
     bifest: [
-      { src: "assets/bifest-1.jpg", title: "BINUS Festival 1", cap: "Momen booth / feedback" },
-      { src: "assets/bifest-2.jpg", title: "BINUS Festival 2", cap: "Momen booth / feedback" },
-      { src: "assets/bifest-3.jpg", title: "BINUS Festival 3", cap: "Momen booth / feedback" },
-      { src: "assets/bifest-4.jpg", title: "BINUS Festival 4", cap: "Momen booth / feedback" },
-      { src: "assets/bifest-5.jpg", title: "BINUS Festival 5", cap: "Momen booth / feedback" }
+      { src: "bf1.jpeg", title: "BINUS Festival", cap: "Photo 1" },
+      { src: "bf2.jpeg", title: "BINUS Festival", cap: "Photo 2" },
+      { src: "bf3.jpeg", title: "BINUS Festival", cap: "Photo 3" },
+      { src: "bf4.jpeg", title: "BINUS Festival", cap: "Photo 4" },
+      { src: "bf5.jpeg", title: "BINUS Festival", cap: "Photo 5" }
     ],
     entre: [
-      { src: "assets/entre-1.jpg", title: "Entre Corner 1", cap: "Interaksi pengunjung" },
-      { src: "assets/entre-2.jpg", title: "Entre Corner 2", cap: "Interaksi pengunjung" },
-      { src: "assets/entre-3.jpg", title: "Entre Corner 3", cap: "Interaksi pengunjung" },
-      { src: "assets/entre-4.jpg", title: "Entre Corner 4", cap: "Interaksi pengunjung" },
-      { src: "assets/entre-5.jpg", title: "Entre Corner 5", cap: "Interaksi pengunjung" }
+      { src: "ec1.jpeg", title: "Entre Corner", cap: "Photo 1" },
+      { src: "ec2.jpeg", title: "Entre Corner", cap: "Photo 2" },
+      { src: "ec3.jpeg", title: "Entre Corner", cap: "Photo 3" },
+      { src: "ec4.jpeg", title: "Entre Corner", cap: "Photo 4" },
+      { src: "ec5.jpeg", title: "Entre Corner", cap: "Photo 5" }
     ],
     bisanara: [
-      { src: "assets/bisanara-1.jpg", title: "Bisanara Screenshot 1", cap: "Screen: (jelaskan halaman)" },
-      { src: "assets/bisanara-2.jpg", title: "Bisanara Screenshot 2", cap: "Screen: (jelaskan halaman)" },
-      { src: "assets/bisanara-3.jpg", title: "Bisanara Screenshot 3", cap: "Screen: (jelaskan halaman)" },
-      { src: "assets/bisanara-4.jpg", title: "Bisanara Screenshot 4", cap: "Screen: (jelaskan halaman)" },
-      { src: "assets/bisanara-5.jpg", title: "Bisanara Screenshot 5", cap: "Screen: (jelaskan halaman)" }
+      { src: "ss1.png", title: "Bisanara Screenshot 1", cap: "Evidence 1" },
+      { src: "ss3.png", title: "Bisanara Screenshot 2", cap: "Evidence 2" },
+      { src: "ss2.png", title: "Bisanara Screenshot 3", cap: "Evidence 3" },
+      { src: "ss5.png", title: "Bisanara Screenshot 4", cap: "Evidence 4" },
+      { src: "ss4.png", title: "Bisanara Screenshot 5", cap: "Evidence 5" }
     ]
   };
 
@@ -220,3 +220,18 @@
     }
   });
 })();
+
+
+document.querySelectorAll(".dot").forEach(dot => {
+  dot.addEventListener("click", () => {
+    const target = dot.dataset.target;
+    const section = document.querySelector(target);
+
+    if (!section) return;
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
