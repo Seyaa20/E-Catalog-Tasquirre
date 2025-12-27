@@ -843,3 +843,36 @@ body{
   opacity: 1 !important;
   transform: none !important;
 }
+
+@media (max-width: 768px) {
+  .slides {
+    scroll-snap-type: none;
+    height: auto;
+  }
+
+  .slide {
+    min-height: auto;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  #features {
+    min-height: auto;
+    height: auto;
+  }
+
+  .featuregrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature {
+    padding: 18px;
+  }
+
+  .benefit {
+    font-size: 14px;
+  }
+}
